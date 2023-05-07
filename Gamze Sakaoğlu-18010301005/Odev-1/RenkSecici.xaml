@@ -1,0 +1,23 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Odev1.RenkSeciciPage"
+             Title="Renk Seçici">
+
+    <StackLayout Padding="20">
+        <BoxView x:Name="ColorBox" WidthRequest="200" HeightRequest="200" Margin="0,0,0,20" />
+
+        <Label Text="Kırmızı Değeri" />
+        <Slider x:Name="RedSlider" Maximum="255" />
+
+        <Label Text="Yeşil Değeri" />
+        <Slider x:Name="GreenSlider" Maximum="255" />
+
+        <Label Text="Mavi Değeri" />
+        <Slider x:Name="BlueSlider" Maximum="255" />
+
+        <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">
+            <Label x:Name="RGBKodLabel" Text="" />
+            <Button Text="RGB Kodunu Kopyala" Clicked="Button_Kopyala_Clicked" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+          x:Class="Odev1.KrediHesaplamaPage"
+          Title="Kredi Hesaplama">
+    <StackLayout Padding="20">
+        <Label Text="Kredi Türü" />
+        <Picker x:Name="KrediTuruPicker" Title="Kredi Türü Seçiniz">
+            <Picker.Items>
+                <x:String>İhtiyaç Kredisi</x:String>
+                <x:String>Konut Kredisi</x:String>
+                <x:String>Taşıt Kredisi</x:String>
+                <x:String>Ticari Kredi</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Label Text="Kredi Tutarı" />
+        <Entry x:Name="KrediTutariEntry" Keyboard="Numeric" />
+
+        <Label Text="Faiz Oranı (%)" />
+        <Entry x:Name="FaizOraniEntry" Keyboard="Numeric" />
+
+        <Label Text="Vade Süresi (Ay)" />
+        <Entry x:Name="VadeSuresiEntry" Keyboard="Numeric" />
+
+        <Button Text="Hesapla" Clicked="Button_Hesapla_Clicked" />
+
+        <Label Text="Aylık Ödeme:" FontSize="Large" />
+        <Label x:Name="AylikOdemeLabel" FontSize="Large" />
+
+        <Label Text="Toplam Ödeme:" FontSize="Large" />
+        <Label x:Name="ToplamOdemeLabel" FontSize="Large" />
+    </StackLayout>
+</ContentPage>

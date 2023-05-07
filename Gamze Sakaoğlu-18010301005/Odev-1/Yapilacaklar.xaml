@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Odev1.YapilacaklarPage"
+             Title="Yapılacaklar">
+
+    <StackLayout Padding="20">
+        <Entry x:Name="TaskEntry" Placeholder="Yeni görev ekle" />
+        <Button Text="Ekle" Clicked="AddTask_Clicked" />
+
+        <ListView x:Name="TaskListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="10">
+                            <Label Text="{Binding Task}" />
+                            <Label Text="{Binding Date, StringFormat='{0:dd/MM/yyyy}'}"
+                                   FontSize="12" TextColor="Gray" HorizontalOptions="EndAndExpand" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Odev_1.MainPage"
+             Title="Odev-1">
+
+    <StackLayout>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Üst bölüm (resim ve yazı) -->
+            <StackLayout Grid.Row="0" BackgroundColor="LightGray" Padding="10">
+                <Image Source="C:\Users\Gamze\source\repos\Odev-1\Odev-1\Resources\Images\profile.jpg" Aspect="AspectFit" HeightRequest="200" />
+                <Label Text="Gamze Sakaoğlu" FontSize="Large" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Center" />
+                <Label Text="Bartın Üniversitesi Bilgisayar Mühendisliği" FontSize="Medium" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Center" />
+                <Label Text="Odev-1" FontSize="Small" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Center" />
+            </StackLayout>
+
+            <!-- İçerik -->
+            <StackLayout Grid.Row="1" Padding="10">
+                
+                <Label Text="Menü" FontSize="Medium" FontAttributes="Bold" />
+                <Button Text="Kredi Hesaplama" Clicked="Button_KrediHesaplama_Clicked"/>
+                <Button Text="Vücut Kitle Indeksi" Clicked="Button_VKI_Clicked"/>
+                <Button Text="Renk Seçici" Clicked="Button_Renk_Clicked"/>
+                <Button Text="Yapılacaklar" Clicked="Button_Yapilacaklar_Clicked"/>
+            </StackLayout>
+
+           
+        </Grid>
+    </StackLayout>
+</ContentPage>
